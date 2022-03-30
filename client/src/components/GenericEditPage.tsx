@@ -4,6 +4,7 @@ import { Grid, Button, Typography, List, ListItem, ListItemAvatar, Avatar, ListI
 import { styled } from '@mui/material/styles';
 import ImagePlaceholder from './Pages/images/image-placeholder.png';
 import { Link } from 'react-router-dom';
+import { EditText, EditTextarea } from 'react-edit-text';
 
 function generate(element: React.ReactElement) {
     return [0, 1, 2, 3].map((value) =>
@@ -21,6 +22,8 @@ function generate(element: React.ReactElement) {
 function GenericEditPage() {
   const [dense, setDense] = React.useState(false);
   const [secondary, setSecondary] = React.useState(false);
+  const [name, setName] = React.useState("");
+  const [desc, setDesc] = React.useState("");
 
   return (
     <div>
@@ -40,10 +43,26 @@ function GenericEditPage() {
                 <img src={ImagePlaceholder} alt="Image placeholder" style={{ padding: 40, width: 500, height: 350 }} />
                 <div className="text">
                     <br /><br />
-                    <Typography variant="h6" sx={{ border:1, padding:2, marginBottom:3 }}>Forest/Plant Name</Typography>
-                    <Typography variant="body1" sx={{ border:1, padding:2, paddingBottom:8 }}>This is a description of the forest/plant type, the distinguishing characteristics and various properties of this forest/plant type...
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <Typography variant="h6" sx={{padding:2, marginBottom:0 }}>
+                        <div style={{whiteSpace: 'nowrap'}}>
+                            <EditText
+                                name='name'
+                                style={{ border: '1px solid #999', padding: '10px', width: '550px' }}
+                                value={name}
+                                onChange={setName}
+                                placeholder='Enter name'
+                            />
+                        </div>
+                    </Typography>
+                    <Typography variant="body1" sx={{padding:2, paddingBottom:8 }}>
+                    <EditTextarea
+                        name='description'
+                        rows={4}
+                        value={desc}
+                        onChange={setDesc}
+                        style={{ border: '1px solid #999', padding: '10px', width: '550px' }}
+                        placeholder='Enter description'
+                        />
                     </Typography>
                 </div>
 

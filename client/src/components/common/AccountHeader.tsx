@@ -88,6 +88,9 @@ export default function AccountHeader() {
 				sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
 			>
 				<Toolbar>
+					<Button>
+						<Link to="/">Little Forest</Link>
+					</Button>
 					<Typography
 						align="left"
 						variant="h6"

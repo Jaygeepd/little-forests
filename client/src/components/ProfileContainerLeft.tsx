@@ -30,9 +30,9 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
 
 export default function ProfileContainerLeft() {
 
-  const [name, setName] = React.useState("");
+  const [name, setName] = React.useState("First, Last");
   const [bio, setBio] = React.useState(
-    ""
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     );
 
   return (
@@ -66,7 +66,7 @@ export default function ProfileContainerLeft() {
                   name='name'
                   value={name}
                   onChange={setName}
-                  placeholder='Click to enter name'
+                  placeholder='Enter name'
                 />
               </div>
               <br/>
@@ -77,7 +77,7 @@ export default function ProfileContainerLeft() {
                 name='bio'
                 value={bio}
                 onChange={setBio}
-                placeholder='Click to enter bio'
+                placeholder='Enter bio'
               />
               <br/><br/>
             </Typography>

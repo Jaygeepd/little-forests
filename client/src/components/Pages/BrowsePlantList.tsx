@@ -30,6 +30,7 @@ function BrowsePlantList() {
 							justifySelf: "flexStart",
 							width: "5px",
 							borderRadius: 5,
+							margin: 1
 						}}
 						variant="contained"
 					>
@@ -54,6 +55,7 @@ function BrowsePlantList() {
 								backgroundColor: "#E1E1E1",
 								width: 700,
 								height: 800,
+								border: 1,
 								borderRadius: 5,
 							}}
 						/>

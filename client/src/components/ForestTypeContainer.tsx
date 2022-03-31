@@ -36,7 +36,7 @@ const ForestTypeContainer = (props: ForestContainerValues) => {
                 alignItems="center"
                 >s
                     <Grid item>
-                        <Button variant="contained">More Info</Button>
+                        <Button variant="contained" component={ Link } to="/results-page">More Info</Button>
                     </Grid>
                     <Grid item>
                         { props.setForestValue ? (

@@ -65,7 +65,7 @@ export default function ForestResultsList() {
                 )}
               </List>
             </Demo>
-            <Button component={Link} to='/plant-list' sx={{ marginBottom:2 }} variant="contained" >Select</Button>
+            <Button component={Link} to='/plan/carolinian' sx={{ marginBottom:2 }} variant="contained" >Select</Button>
           </Container>
 
           

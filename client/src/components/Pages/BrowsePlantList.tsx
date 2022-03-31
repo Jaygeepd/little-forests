@@ -1,6 +1,8 @@
 import { Header, Footer } from "../common";
 import { Grid, Container, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { CardMedia } from "@mui/material";
+import samplePDF from '../../public/Plant-List.pdf';
 
 function BrowsePlantList() {
 	return (
@@ -43,15 +45,18 @@ function BrowsePlantList() {
 					<Grid item xs={3} />
 
 					<Grid item xs={8}>
-						<Container
-							maxWidth="lg"
+						<CardMedia
+							component="img"
+							alt="pdf-img"
+							height="250"
+							image={require("./images/Plant-List.jpg")}
 							sx={{
 								backgroundColor: "#E1E1E1",
 								width: 700,
 								height: 800,
 								borderRadius: 5,
 							}}
-						></Container>
+						/>
 					</Grid>
 				</Grid>
 
@@ -80,7 +85,7 @@ function BrowsePlantList() {
 							marginLeft: 10,
 						}}
 					>
-						Save as PDF
+						<a href={ samplePDF } >Save as PDF</a>
 					</Button>
 				</Grid>
 			</Grid>

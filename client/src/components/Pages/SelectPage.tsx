@@ -177,7 +177,7 @@ export default function BuilderPage() {
 				</Grid>
 				
 				<Grid item xs={12}>
-					<ProgressStepper />
+					
 				</Grid> 
 				<Grid item xs={3} />
 				<Grid item xs={6} />

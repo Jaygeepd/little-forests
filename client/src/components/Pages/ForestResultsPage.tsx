@@ -36,7 +36,6 @@ export default function ForestResultsList() {
       <AccountHeader />    
       <br /><br /><br /><br /><br />
       <h2>Forest Type</h2>
-      <ProgressStepper />
       <br />
       <Container sx={{display:"flex", flexDirection:"column", alignItems:"center"}}>
         <div className="top-half">
@@ -65,7 +64,7 @@ export default function ForestResultsList() {
                 )}
               </List>
             </Demo>
-            <Button component={Link} to='/plant-list' sx={{ marginBottom:2 }} variant="contained" >Select</Button>
+            <Button component={Link} to='/plan/carolinian' sx={{ marginBottom:2 }} variant="contained" >Select</Button>
           </Container>
 
           

@@ -42,7 +42,7 @@ export default function ForestResultsList() {
         <div className="top-half">
           <img src={Image} alt="Image placeholder" style={{ padding: 40, width: 500, height: 350 }} />
           <div className="text">
-            <br /><br />
+            <br />
             <h3>Carolinian Forest</h3>
             <p>The Carolinian forest refers to a life zone in eastern North America characterized primarily by the predominance of deciduous (broad-leaf) forest. The term "Carolinian", which is most commonly used in Canada, refers to the deciduous forests which span across much of the eastern United States from the Carolinas northward into southern Ontario, Canada. These deciduous forests in the United States and southern Ontario share many similar characteristics and species hence their association. Today the term is often used to refer to the Canadian portion (northern limit) of the deciduous forest region while the portion in the United States is often referred to as the "Eastern deciduous forest". Trees found here include various species of ash, birch, chestnut, hickory, oak, and walnut; tallest of all is the tulip tree. Fruit trees native to this zone include the pawpaw.
             </p>

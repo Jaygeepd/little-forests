@@ -29,7 +29,59 @@ function ForestResultsList() {
 			<Grid sx={{ flexGrow: 1 }} container spacing={2}>
 				<Grid item xs={12}>
 					<Grid container justifyContent="center" spacing={5}>
-						{[0, 1, 2].map((value) => (
+					{[0].map((value) => (
+							<Grid key={value} item>
+								<Box
+									onClick={() => {
+										navigate("/results-page");
+									}}
+									sx={{
+										borderRadius: 4,
+										height: 410,
+										width: 360,
+										backgroundColor: "primary.dark",
+										"&:hover": {
+											backgroundColor: "primary.main",
+											opacity: [0.9, 0.8, 0.7],
+										},
+									}}
+								>
+									<Card
+										sx={{
+											maxWidth: 300,
+											p: 3,
+											backgroundColor: "primary.main",
+										}}
+									>
+										<CardActionArea>
+											<CardMedia
+												component="img"
+												height="200"
+												image={require("./images/CarolinianForest.jpg")}
+												alt="Image placeholder"
+												style={{ borderRadius: 5 }}
+											/>
+											<CardContent>
+												<Typography
+													gutterBottom
+													variant="h5"
+													component="div"
+												>
+													Carolinian Forest
+												</Typography>
+												<Typography
+													variant="body2"
+													color="text.secondary"
+												>
+													The Carolinian forest refers to a life zone in eastern North America characterized primarily by the predominance of deciduous (broad-leaf) forest.
+												</Typography>
+											</CardContent>
+										</CardActionArea>
+									</Card>
+								</Box>
+							</Grid>
+						))}
+						{[1, 2].map((value) => (
 							<Grid key={value} item>
 								<Box
 									onClick={() => {

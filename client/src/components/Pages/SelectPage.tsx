@@ -128,8 +128,8 @@ const pageContainers: ContainerValues[] = [
 
 // Test Forest Type
 const testForest: ForestContainerValues = {
-    title: "Test Forest", 
-    description: "This is the test for short description of this forest type."
+    title: "Sample Carolinian", 
+	description: "An example of a Carolinian type of forest."
 }
 
 // List to hold the values of the current suggested forest list

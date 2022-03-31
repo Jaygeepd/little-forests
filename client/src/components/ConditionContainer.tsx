@@ -37,10 +37,6 @@ function ConditionContainer(props: ContainerValues) {
 									</>
 								) : (
 									<>
-										<img
-											className="condition-thumbnail"
-											src={placeholderImage}
-										/>
 										<h4>{condition.subtitle}</h4>
 									</>
 								)}

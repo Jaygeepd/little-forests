@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Grid, Button, Stack, Divider } from '@mui/material';
 import { ForestContainerValues } from './Pages/SelectPage';
 import placeholderImage from '../placeholder.jpg';
+import caroline from './Pages/images/CarolinianForest.jpg';
 
 const ForestTypeContainer = (props: ForestContainerValues) => {
 
@@ -21,7 +22,7 @@ const ForestTypeContainer = (props: ForestContainerValues) => {
                     </>
                     : 
                     <>
-                        <img className="forest-thumbnail" src={placeholderImage}/> 
+                        <img className="forest-thumbnail" src={caroline}/> 
                     </>
                     
                 } 

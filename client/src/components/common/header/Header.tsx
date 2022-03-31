@@ -24,8 +24,8 @@ const Header = () => {
       <section className="header-top">
         <section className="header-top-logo" style = {{ marginTop:15, marginLeft:15 }}>
           
-          <Link to="/">
-            Little Forest
+          <Link to="/" className="little-forest-logo">
+            Little Forests
           </Link>
           
         </section>

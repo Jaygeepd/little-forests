@@ -5,6 +5,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Link } from 'react-router-dom';
 import AccountHeader from './common/AccountHeader'; 
 import { EditText, EditTextarea } from 'react-edit-text';
+import ProfilePlaceholder from "./Pages/images/Profile_avatar_placeholder.png";
 
 const drawerWidth = 250;
 
@@ -54,15 +55,8 @@ export default function ProfileContainerLeft() {
         anchor="left"
       >
         <Toolbar />
-          <Box //placeholder for profile image later
-            sx={{
-              width: 200,
-              height: 260,
-              m: 3,
-              backgroundColor: 'primary.dark',
-              borderRadius: 3
-            }}
-          />
+          {/*placeholder for profile image later*/}
+          <img src={ProfilePlaceholder} alt="Profile picture placeholder" style={{ margin: 20, width: 200, height: 230, borderRadius: 3}} />
           <Box sx={{ width: 200, height: 260, m:3 }}>
             <Typography align="left" variant="body1">
             <div style={{whiteSpace: 'nowrap'}}>

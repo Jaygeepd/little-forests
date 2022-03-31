@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+.little-forest-logo {
+  font-family: "Lobster", cursive;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  text-transform: capitalize;
+}

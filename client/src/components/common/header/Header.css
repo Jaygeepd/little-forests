@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 .header {
   position: fixed;
   right: 0;
@@ -8,10 +9,24 @@
   z-index: 1100;
 }
 
+.header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header-top-logo {
   text-align: left;
 }
 
 .header-top-button {
   text-align: right;
+  margin-top: 25px;
+}
+.little-forest-logo {
+  font-family: "Lobster", cursive;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
 }

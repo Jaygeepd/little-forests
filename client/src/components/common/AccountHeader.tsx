@@ -22,6 +22,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
+import './AccountHeader.css';
 
 const drawerWidth = 250;
 
@@ -89,8 +90,9 @@ export default function AccountHeader() {
 			>
 				<Toolbar>
 					<Button>
-						<Link to="/">Little Forest</Link>
+						<Link to="/" className="little-forest-logo">Little Forest</Link>
 					</Button>
+					
 					<Typography
 						align="left"
 						variant="h6"
@@ -98,8 +100,9 @@ export default function AccountHeader() {
 						sx={{ flexGrow: 1 }}
 						component="div"
 					>
-						{account}
+						{/*{account}*/}
 					</Typography>
+					
 					<IconButton
 						color="inherit"
 						aria-label="open drawer"

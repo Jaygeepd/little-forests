@@ -4,6 +4,7 @@ import SelectorBox from "../SelectorBox";
 import AccountHeader from "../common/AccountHeader";
 import PlantItem from "../PlantItem";
 import { useParams } from "react-router-dom";
+import ProgressStepper from '../ProgressStepper';
 
 // Interface for the selector boxes
 export interface SelectorBoxValues {
@@ -34,15 +35,6 @@ export default function PlanPage() {
 
 	// We need to track the list of selected plants for each category and their related quantity
 	const treeList: any[] = [];
-	const shrubList: any[] = [];
-	const canopyList: any[] = [];
-	const understoryList: any[] = [];
-
-	let currLength: number =
-		treeList.length +
-		shrubList.length +
-		canopyList.length +
-		understoryList.length;
 
 	// Use a get request to get the selected forest and plant list
 	const [forestType, setForestType] = useState();
@@ -101,31 +93,14 @@ export default function PlanPage() {
 	return (
 		<>
 			<AccountHeader />
+			<ProgressStepper /> 
 			<Grid container className="screen-padded">
 				<Grid item xs={2} />
 				<Grid item xs={8}>
 					<Stack spacing={3}>
 						<SelectorBox
-							title="Trees"
+							title="Plant List"
 							selectorList={treeList}
-							openFunc={handleOpen}
-							closeFunc={handleClose}
-						/>
-						<SelectorBox
-							title="Shrub"
-							selectorList={shrubList}
-							openFunc={handleOpen}
-							closeFunc={handleClose}
-						/>
-						<SelectorBox
-							title="Canopy"
-							selectorList={canopyList}
-							openFunc={handleOpen}
-							closeFunc={handleClose}
-						/>
-						<SelectorBox
-							title="Understory"
-							selectorList={understoryList}
 							openFunc={handleOpen}
 							closeFunc={handleClose}
 						/>

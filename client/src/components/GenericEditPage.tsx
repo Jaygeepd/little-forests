@@ -5,6 +5,7 @@ import { styled } from '@mui/material/styles';
 import ImagePlaceholder from './Pages/images/image-placeholder.png';
 import { Link } from 'react-router-dom';
 import { EditText, EditTextarea } from 'react-edit-text';
+import Image from "./Pages/images/norwaymaple.jpg";
 
 function generate(element: React.ReactElement) {
     return [0, 1, 2, 3].map((value) =>
@@ -22,8 +23,8 @@ function generate(element: React.ReactElement) {
 function GenericEditPage() {
   const [dense, setDense] = React.useState(false);
   const [secondary, setSecondary] = React.useState(false);
-  const [name, setName] = React.useState("");
-  const [desc, setDesc] = React.useState("");
+  const [name, setName] = React.useState("Norway Maple");
+  const [desc, setDesc] = React.useState("The Norway Maple is native to Europe and can be found throughout Ontario, Quebec and NewfoundLand. It inhabits mainly urban areas but will also grow in open mesic wooded areas and is quite tolerant to pollution. Its shallow roots break sidewalks and its dense foliage and shallow roots prevent native species from growing underneath. It is an invasive species in Canada, and control methods include cutting, and digging or pulling out saplings. Unlike most other maples, it has a milky sap and is tolerant of any soil conditions. This species, which was introduced to the United States from Europe in 1756, is still being sold in nurseries today.");
 
   return (
     <div>
@@ -40,28 +41,28 @@ function GenericEditPage() {
             </Grid>
             
             <div className="top-half">
-                <img src={ImagePlaceholder} alt="Image placeholder" style={{ padding: 40, width: 500, height: 350 }} />
+                <img src={Image} alt="Image placeholder" style={{ padding: 40, width: 500, height: 350 }} />
                 <div className="text">
                     <br /><br />
                     <Typography variant="h6" sx={{padding:2, marginBottom:0 }}>
                         <div style={{whiteSpace: 'nowrap'}}>
                             <EditText
                                 name='name'
-                                style={{ border: '1px solid #999', padding: '10px', width: '550px' }}
+                                style={{ padding: '10px', width: '550px' }}
                                 value={name}
                                 onChange={setName}
-                                placeholder='Enter name'
+                                placeholder=''
                             />
                         </div>
                     </Typography>
-                    <Typography variant="body1" sx={{padding:2, paddingBottom:8 }}>
+                    <Typography variant="body1" sx={{ padding:2, paddingBottom:8 }}>
                     <EditTextarea
                         name='description'
                         rows={4}
                         value={desc}
                         onChange={setDesc}
-                        style={{ border: '1px solid #999', padding: '10px', width: '550px' }}
-                        placeholder='Enter description'
+                        style={{ padding: '10px', width: '550px', height: '200px' }}
+                        placeholder=''
                         />
                     </Typography>
                 </div>

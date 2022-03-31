@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Stack, IconButton, TextField } from '@mui/material';
-import { KeyboardArrowUp, KeyboardArrowDown, AddCircle } from '@mui/icons-material';
+import { KeyboardArrowUp, KeyboardArrowDown, AddCircle, RemoveCircle } from '@mui/icons-material';
 import placeholderImage from '../placeholder.jpg';
 import { PlantItemValues } from './SelectorBox';
 
@@ -50,7 +50,9 @@ export default function PlantItem(props: PlantItemValues) {
                             </IconButton>
                         ) : (
                                 
-                                <></>
+                            <IconButton>
+                                <RemoveCircle />
+                            </IconButton>
                         )
                     }
 

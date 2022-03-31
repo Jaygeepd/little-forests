@@ -3,7 +3,8 @@ import { Grid, Button, Stack, Divider } from '@mui/material';
 import { ForestContainerValues } from './Pages/SelectPage';
 import placeholderImage from '../placeholder.jpg';
 import caroline from './Pages/images/CarolinianForest.jpg';
-
+import { Link } from 'react-router-dom';
+ 
 const ForestTypeContainer = (props: ForestContainerValues) => {
 
     // Store title in case we need to return forest type
@@ -39,7 +40,7 @@ const ForestTypeContainer = (props: ForestContainerValues) => {
                     </Grid>
                     <Grid item>
                         { props.setForestValue ? (
-                            <Button variant="contained" onClick={props.setForestValue()} value={title}>Select</Button>
+                            <Button variant="contained" component={Link} to='/plan/1'>Select</Button>
                         ) : (
                             <Button variant="contained" disabled>Select</Button>
                             )

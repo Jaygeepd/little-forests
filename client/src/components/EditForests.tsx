@@ -35,7 +35,55 @@ function EditForests() {
 						component="img"
 						alt="Placeholder Image" /*prop later?*/
 						height="250"
-						src="./Pages/images/image-placeholder.png" /*prop later?*/
+						image={require("./Pages/images/CarolinianForest.jpg")}
+						sx={{
+							border: 1,
+							borderColor: "white",
+							borderRadius: 3,
+						}}
+					/>
+					<CardContent>
+						<Typography gutterBottom variant="h5" component="div">
+							Sample Carolinian Forest
+						</Typography>
+						<Typography variant="body2" color="text.secondary">
+							Carolinian Forest
+						</Typography>
+					</CardContent>
+					<CardActions
+						sx={{
+							display: "flex",
+							flexDirection: "column",
+							alignContent: "center",
+						}}
+					>
+						<Button
+							component={Link}
+							to="/edit-page"
+							sx={{ marginBottom: 2 }}
+							variant="outlined"
+							size="small"
+						>
+							Edit Forest Type
+						</Button>
+					</CardActions>
+				</Card>
+
+				<Card
+					sx={{
+						width: 250,
+						maxWidth: 300,
+						backgroundColor: "#e1e1e1",
+						borderRadius: 5,
+						padding: 3,
+						margin: 2,
+					}}
+				>
+					<CardMedia
+						component="img"
+						alt="Placeholder Image" /*prop later?*/
+						height="250"
+						image={require("./Pages/images/image-placeholder.png")}
 						sx={{
 							border: 1,
 							borderColor: "white",
@@ -83,7 +131,7 @@ function EditForests() {
 						component="img"
 						alt="Placeholder Image" /*prop later?*/
 						height="250"
-						src="./Pages/images/image-placeholder.png" /*prop later?*/
+						image={require("./Pages/images/image-placeholder.png")}
 						sx={{
 							border: 1,
 							borderColor: "white",
@@ -131,55 +179,7 @@ function EditForests() {
 						component="img"
 						alt="Placeholder Image" /*prop later?*/
 						height="250"
-						src="./Pages/images/image-placeholder.png" /*prop later?*/
-						sx={{
-							border: 1,
-							borderColor: "white",
-							borderRadius: 3,
-						}}
-					/>
-					<CardContent>
-						<Typography gutterBottom variant="h5" component="div">
-							Forest Type
-						</Typography>
-						<Typography variant="body2" color="text.secondary">
-							Description
-						</Typography>
-					</CardContent>
-					<CardActions
-						sx={{
-							display: "flex",
-							flexDirection: "column",
-							alignContent: "center",
-						}}
-					>
-						<Button
-							component={Link}
-							to="/edit-page"
-							sx={{ marginBottom: 2 }}
-							variant="outlined"
-							size="small"
-						>
-							Edit Forest Type
-						</Button>
-					</CardActions>
-				</Card>
-
-				<Card
-					sx={{
-						width: 250,
-						maxWidth: 300,
-						backgroundColor: "#e1e1e1",
-						borderRadius: 5,
-						padding: 3,
-						margin: 2,
-					}}
-				>
-					<CardMedia
-						component="img"
-						alt="Placeholder Image" /*prop later?*/
-						height="250"
-						src="./Pages/images/image-placeholder.png" /*prop later?*/
+						image={require("./Pages/images/image-placeholder.png")}
 						sx={{
 							border: 1,
 							borderColor: "white",

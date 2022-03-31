@@ -1,5 +1,6 @@
-import { Card, CardMedia, CardContent, Typography, Grid } from "@mui/material";
+import { Button, Card, CardMedia, CardContent, CardActions, Typography, Grid } from "@mui/material";
 import { Footer, Header } from "../common";
+import { Link } from 'react-router-dom';
 
 export default function BrowsePlants() {
 	return (
@@ -61,17 +62,12 @@ export default function BrowsePlants() {
 										sx={{ textAlign: "left" }}
 									>
 										The Norway Maple is native to Europe and can be found 
-										throughout Ontario, Quebec and NewfoundLand. It inhabits mainly urban 
-										areas but will also grow in open mesic wooded areas and is quite 
-										tolerant to pollution. Its shallow roots break sidewalks and its dense 
-										foliage and shallow roots prevent native species from growing underneath. 
-										It is an invasive species in Canada, and control methods include cutting, 
-										and digging or pulling out saplings. Unlike most other maples, it has a 
-										milky sap and is tolerant of any soil conditions. This species, which was 
-										introduced to the United States from Europe in 1756, is still being sold 
-										in nurseries today.
+										throughout Ontario, Quebec and NewfoundLand...
 									</Typography>
 								</CardContent>
+								<CardActions sx={{ display:"flex", flexDirection:"column", alignContent:"center" }}>
+									<Button component={Link} to='/indiv-plant-page' sx={{ marginBottom:2 }} variant="outlined" size="small">View Plant</Button>
+								</CardActions>
 							</Card>
 						</Grid>
 					))}
@@ -112,12 +108,12 @@ export default function BrowsePlants() {
 										color="text.secondary"
 										sx={{ textAlign: "left" }}
 									>
-										Aesculus glabra, commonly known as Ohio buckeye, is a species of tree in the soapberry family (Sapindaceae) native to North America.
-										Its natural range is primarily in the Midwestern and lower Great Plains regions of the United States, extending southeast into the geological Black Belt of Alabama and Mississippi. 
-										It is also found locally in the extreme southwest of Ontario, on Walpole Island in Lake St. Clair.
-										It is found in a variety of natural habitats, including streambanks, upland mesic forests, and along the margins of old fields. It is typically found in calcareous areas.
+										Aesculus glabra, commonly known as Ohio buckeye, is a species of tree in the soapberry family (Sapindaceae) native to North America...
 									</Typography>
 								</CardContent>
+								<CardActions sx={{ display:"flex", flexDirection:"column", alignContent:"center" }}>
+									<Button component={Link} to='/indiv-plant-page' sx={{ marginBottom:2 }} variant="outlined" size="small">View Plant</Button>
+								</CardActions>
 							</Card>
 						</Grid>
 					))}
@@ -164,6 +160,9 @@ export default function BrowsePlants() {
 										dolore magna aliqua.
 									</Typography>
 								</CardContent>
+								<CardActions sx={{ display:"flex", flexDirection:"column", alignContent:"center" }}>
+									<Button component={Link} to='/indiv-plant-page' sx={{ marginBottom:2 }} variant="outlined" size="small">View Plant</Button>
+								</CardActions>
 							</Card>
 						</Grid>
 					))}

@@ -30,10 +30,9 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
 
 export default function ProfileContainerLeft() {
 
-  const [name, setName] = React.useState("FirstName, LastName");
+  const [name, setName] = React.useState("");
   const [bio, setBio] = React.useState(
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \
-    tempor incididunt ut labore et dolore magna aliqua. "
+    ""
     );
 
   return (
@@ -60,10 +59,14 @@ export default function ProfileContainerLeft() {
           <Box sx={{ width: 200, height: 260, m:3 }}>
             <Typography align="left" variant="body1">
             <div style={{whiteSpace: 'nowrap'}}>
+              <strong>
+                <label style={{ paddingTop: '2px' }}>Name:</label>
+              </strong>
                 <EditText
                   name='name'
                   value={name}
                   onChange={setName}
+                  placeholder='Click to enter name'
                 />
               </div>
               <br/>
@@ -74,6 +77,7 @@ export default function ProfileContainerLeft() {
                 name='bio'
                 value={bio}
                 onChange={setBio}
+                placeholder='Click to enter bio'
               />
               <br/><br/>
             </Typography>

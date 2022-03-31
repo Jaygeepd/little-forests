@@ -27,7 +27,7 @@ function EditPlants() {
                         component="img"
                         alt="Placeholder Image"/*prop later?*/
                         height="250"
-                        src="./Pages/images/image-placeholder.png"/*prop later?*/
+                        image={require("./Pages/images/image-placeholder.png")}
                         sx={{ border:1, borderColor:"white", borderRadius:3 }}
                     />
                     <CardContent>
@@ -51,7 +51,7 @@ function EditPlants() {
                         component="img"
                         alt="Placeholder Image"/*prop later?*/
                         height="250"
-                        src="./Pages/images/image-placeholder.png"/*prop later?*/
+                        image={require("./Pages/images/image-placeholder.png")}
                         sx={{ border:1, borderColor:"white", borderRadius:3 }}
                     />
                     <CardContent>
@@ -75,7 +75,7 @@ function EditPlants() {
                         component="img"
                         alt="Placeholder Image"/*prop later?*/
                         height="250"
-                        src="./Pages/images/image-placeholder.png"/*prop later?*/
+                        image={require("./Pages/images/image-placeholder.png")}
                         sx={{ border:1, borderColor:"white", borderRadius:3 }}
                     />
                     <CardContent>
@@ -99,7 +99,7 @@ function EditPlants() {
                         component="img"
                         alt="Placeholder Image"/*prop later?*/
                         height="250"
-                        src="./Pages/images/image-placeholder.png"/*prop later?*/
+                        image={require("./Pages/images/image-placeholder.png")}
                         sx={{ border:1, borderColor:"white", borderRadius:3 }}
                     />
                     <CardContent>

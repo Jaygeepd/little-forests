@@ -9,7 +9,7 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import ListItemText from '@mui/material/ListItemText';
 import { Header } from '../common';
-import ImagePlaceholder from './images/image-placeholder.png';
+import carolinian from './images/CarolinianForest.jpg';
 import './ForestResultsPage.css';
 import { Link } from 'react-router-dom';
 
@@ -38,19 +38,26 @@ export default function BrowseForestPage() {
         }}
       >
         <Button component={Link} to='/browseforests' sx={{ width: '5px', borderRadius:5, marginTop:2 }} variant="contained">Back</Button>
-        <Typography variant="h5" sx={{ marginBottom:2 }}>Little Forest Name</Typography>
+        <Typography variant="h5" sx={{ marginBottom:2 }}>Carolinian Forest</Typography>
       </Container>
 
       <Container sx={{display:"flex", flexDirection:"column", alignItems:"center"}}>
         <div className="top-half">
-          <img src={ImagePlaceholder} alt="Image placeholder" style={{ padding: 40, width: 500, height: 350 }} />
+          <img src={carolinian} alt="carolinian" style={{ padding: 40, width: 500, height: 266 }} />
           <div className="text">
-            <br /><br />
-            <h3>Forest Type</h3>
-            <p>This is a description of the forest type, the distinguishing characteristics and various properties of this forest type...
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <br />
+            <h3>Carolinian (Deciduous)</h3>
+            <p>Location: Southwestern Ontario
+                Predominant Tree Species: Beech, Maple, Black Walnut, Hickory, Oak</p> 
+            <p>The Carolinian forest refers to a life zone in eastern North America characterized 
+              primarily by the predominance of deciduous (broad-leaf) forest. The term "Carolinian",
+               which is most commonly used in Canada, refers to the deciduous forests which span across 
+               much of the eastern United States from the Carolinas northward into southern Ontario, Canada. 
+               These deciduous forests in the United States and southern Ontario share many similar characteristics 
+               and species hence their association. Today the term is often used to refer to the Canadian portion 
+               (northern limit) of the deciduous forest region while the portion in the United States is often referred 
+               to as the "Eastern deciduous forest". Trees found here include various species of ash, birch, chestnut, 
+               hickory, oak, and walnut; tallest of all is the tulip tree. Fruit trees native to this zone include the pawpaw.</p>
           </div>
 
           <Container sx={{ display:"flex", flexDirection:"column", alignItems:"center", jutifyContent:"center", marginTop:8 }} className="characteristic-list">

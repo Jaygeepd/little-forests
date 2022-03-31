@@ -33,7 +33,7 @@ export default function BrowseForests() {
 					alignItems="stretch"
 					direction="row"
 				>
-					{[0, 1, 2, 3].map((value) => (
+					{[0].map((value) => (
 						<Grid key={value} item>
 							<Card
 								sx={{
@@ -47,9 +47,67 @@ export default function BrowseForests() {
 							>
 								<CardMedia
 									component="img"
-									alt="Placeholder Image" /*prop later?*/
+									alt="carolinian"
 									height="250"
-									src="./Pages/images/image-placeholder.png" /*prop later?*/
+									image={require("./images/CarolinianForest.jpg")}
+									sx={{
+										border: 1,
+										borderColor: "white",
+										borderRadius: 3,
+									}}
+								/>
+								<CardContent>
+									<Typography
+										gutterBottom
+										variant="h5"
+										component="div"
+									>
+										Sample Carolinian Forest
+									</Typography>
+									<Typography
+										variant="body2"
+										color="text.secondary"
+									>
+										Carolinian Forest
+									</Typography>
+								</CardContent>
+								<CardActions
+									sx={{
+										display: "flex",
+										flexDirection: "column",
+										alignContent: "center",
+									}}
+								>
+									<Button
+										component={Link}
+										to="/browse-forest-page"
+										sx={{ marginBottom: 2 }}
+										variant="outlined"
+										size="small"
+									>
+										View Projet
+									</Button>
+								</CardActions>
+							</Card>
+						</Grid>
+					))}
+					{[1, 2, 3].map((value) => (
+						<Grid key={value} item>
+							<Card
+								sx={{
+									width: 250,
+									maxWidth: 300,
+									backgroundColor: "#e1e1e1",
+									borderRadius: 5,
+									padding: 3,
+									margin: 2,
+								}}
+							>
+								<CardMedia
+									component="img"
+									alt="placeholder"
+									height="250"
+									image={require("./images/image-placeholder.png")}
 									sx={{
 										border: 1,
 										borderColor: "white",
@@ -69,12 +127,6 @@ export default function BrowseForests() {
 										color="text.secondary"
 									>
 										Forest Type
-									</Typography>
-									<Typography
-										variant="body2"
-										color="text.secondary"
-									>
-										Description
 									</Typography>
 								</CardContent>
 								<CardActions

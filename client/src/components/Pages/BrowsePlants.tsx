@@ -23,7 +23,7 @@ export default function BrowsePlants() {
 					alignItems="stretch"
 					direction="row"
 				>
-					{[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((value) => (
+					{[0].map((value) => (
 						<Grid key={value} item>
 							<Card
 								sx={{
@@ -39,7 +39,105 @@ export default function BrowsePlants() {
 									component="img"
 									alt="Placeholder Image" /*prop later?*/
 									height="250"
-									src="./Pages/images/image-placeholder.png" /*prop later?*/
+									image={require("./images/norwaymaple.jpg")}
+									sx={{
+										border: 1,
+										borderColor: "white",
+										borderRadius: 3,
+									}}
+								/>
+								<CardContent>
+									<Typography
+										gutterBottom
+										variant="h5"
+										component="div"
+										sx={{ textAlign: "left" }}
+									>
+										Norway Maple
+									</Typography>
+									<Typography
+										variant="body2"
+										color="text.secondary"
+										sx={{ textAlign: "left" }}
+									>
+										The Norway Maple is native to Europe and can be found 
+										throughout Ontario, Quebec and NewfoundLand. It inhabits mainly urban 
+										areas but will also grow in open mesic wooded areas and is quite 
+										tolerant to pollution. Its shallow roots break sidewalks and its dense 
+										foliage and shallow roots prevent native species from growing underneath. 
+										It is an invasive species in Canada, and control methods include cutting, 
+										and digging or pulling out saplings. Unlike most other maples, it has a 
+										milky sap and is tolerant of any soil conditions. This species, which was 
+										introduced to the United States from Europe in 1756, is still being sold 
+										in nurseries today.
+									</Typography>
+								</CardContent>
+							</Card>
+						</Grid>
+					))}
+					{[1].map((value) => (
+						<Grid key={value} item>
+							<Card
+								sx={{
+									width: 250,
+									maxWidth: 300,
+									backgroundColor: "#e1e1e1",
+									borderRadius: 5,
+									padding: 3,
+									margin: 2,
+								}}
+							>
+								<CardMedia
+									component="img"
+									alt="Placeholder Image" /*prop later?*/
+									height="250"
+									image={require("./images/Ohiobuckeye.jpeg")}
+									sx={{
+										border: 1,
+										borderColor: "white",
+										borderRadius: 3,
+									}}
+								/>
+								<CardContent>
+									<Typography
+										gutterBottom
+										variant="h5"
+										component="div"
+										sx={{ textAlign: "left" }}
+									>
+										Ohio Buckeye
+									</Typography>
+									<Typography
+										variant="body2"
+										color="text.secondary"
+										sx={{ textAlign: "left" }}
+									>
+										Aesculus glabra, commonly known as Ohio buckeye, is a species of tree in the soapberry family (Sapindaceae) native to North America.
+										Its natural range is primarily in the Midwestern and lower Great Plains regions of the United States, extending southeast into the geological Black Belt of Alabama and Mississippi. 
+										It is also found locally in the extreme southwest of Ontario, on Walpole Island in Lake St. Clair.
+										It is found in a variety of natural habitats, including streambanks, upland mesic forests, and along the margins of old fields. It is typically found in calcareous areas.
+									</Typography>
+								</CardContent>
+							</Card>
+						</Grid>
+					))}
+					{[2, 3].map((value) => (
+						<Grid key={value} item>
+							<Card
+								sx={{
+									width: 250,
+									maxWidth: 300,
+									backgroundColor: "#e1e1e1",
+									borderRadius: 5,
+									padding: 3,
+									margin: 2,
+								}}
+							>
+								<CardMedia
+									component="img"
+									alt="Placeholder Image" /*prop later?*/
+									height="250"
+									image={require("./images/image-placeholder.png")}
 									sx={{
 										border: 1,
 										borderColor: "white",

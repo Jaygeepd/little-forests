@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header, Footer } from '../common'
 import { Box, Container, Grid, Paper, Typography } from '@mui/material'
-import ImagePlaceholder from './images/image-placeholder.png';
+import ImagePlaceholder from './images/forest-general.jpeg';
 
 export default function AboutPage() {
   return (
@@ -21,10 +21,12 @@ export default function AboutPage() {
             </Grid>
             
             <Container sx={{ display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center' }}>
-                <Paper elevation={8} style={{ marginTop:20, padding:25, width:'80%', height:350 }}>
-                {[0, 1, 2, 3, 4].map((value) => (
-                    <img key={value} src={ImagePlaceholder} alt="Image placeholder" style={{ padding:5, width: 150, height: 150 }} />
+                <Paper elevation={8} style={{ marginTop:20, padding:25, width:'80%', height:200 }}>
+                {/*
+                {[0,1,2,3,4].map((value) => (
+                    <img key={value} src={ImagePlaceholder} alt="Image placeholder" style={{ padding:5, width: 266, height: 150 }} />
                 ))}
+                */}
                     <Typography align="left" variant="h6" sx={{ paddingTop:3, paddingLeft:5, paddingRight:5 }}>Our Mission</Typography>
                     <Typography align="left" variant="body1" sx={{ paddingTop:2, paddingLeft:5, paddingRight:5 }}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 

@@ -13,6 +13,7 @@ import {
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
+import { setConstantValue } from "typescript";
 
 function Copyright(props: any) {
 	return (
@@ -42,6 +43,14 @@ const theme = createTheme();
 
 const LogIn = (props: HookProps) => {
 	let navigate = useNavigate();
+
+	const [signUpOpen, setSignUpOpen] = React.useState(false);
+
+	const handleSignUp = () => {
+		props.setState(false);
+
+		setSignUpOpen(true);
+	}
 
 	const [email, setEmail] = React.useState("");
 	const [password, setPassword] = React.useState("");
@@ -146,9 +155,9 @@ const LogIn = (props: HookProps) => {
 						{isLoggedIn? props.setState(false): <p>{message}</p>}
 						<Grid container justifyContent="flex-end">
 							<Grid item>
-								<Link href="#" variant="body2">
+								<a onClick={handleSignUp}>
 									Don't have an account? Sign Up
-								</Link>
+								</a>
 							</Grid>
 						</Grid>
 					</Box>

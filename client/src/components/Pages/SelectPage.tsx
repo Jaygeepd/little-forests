@@ -6,16 +6,14 @@ import ConditionContainer from "../ConditionContainer";
 import AccountHeader from "../common/AccountHeader";
 import { useState, useEffect } from "react";
 import ForestTypeContainer from '../ForestTypeContainer';
-import { FenceTwoTone } from '@mui/icons-material';
-import { useNavigate } from 'react-router-dom';
 
 // Interface for the values that will be within each container - for passing into our map
 export interface ContainerValues {
 	title: string;
+	description: string;
 	siteConditions: SiteConditionValues[];
 	setSelectedValue?: Function;
 	selectedValues?: any;
-	radioFunction: Function;
 }
 
 // Interface for site conditions
@@ -25,53 +23,123 @@ export interface SiteConditionValues {
 }
 
 export interface ForestContainerValues {
-	name: string;
+	title: string;
+	description: string;
 	imageURL?: string;
 	setForestValue?: Function;
 }
 
 // Create a list version of Site Condition Values
-interface SiteConditionList extends Array<SiteConditionValues> {}let currForestResults:ForestContainerValues[] = []
+interface SiteConditionList extends Array<SiteConditionValues> {}
+
+// Slope Site Condition List
+const slopeConditions: SiteConditionValues[] = [
+	{ subtitle: "None" },
+	{ subtitle: "Gentle" },
+	{ subtitle: "Moderate" },
+	{ subtitle: "Steep" },
+];
+
+// Slope container props
+const slopeContainer: ContainerValues = {
+	title: "Slope",
+	description:
+		"Select the slope gradient that best describes where your Little Forest will be planted",
+	siteConditions: slopeConditions,
+};
+
+// Soil Drainage Condition List
+const drainageConditions: SiteConditionValues[] = [
+	{ subtitle: "Very Rapid" },
+	{ subtitle: "Rapid" },
+	{ subtitle: "Well" },
+	{ subtitle: "Moderately Well" },
+	{ subtitle: "Imperfect" },
+	{ subtitle: "Poorly Drained" },
+	{ subtitle: "Very Poorly Drained" },
+];
+
+// Drainage container props
+const drainageContainer: ContainerValues = {
+	title: "Soil Drainage",
+	description:
+		"Select the option that best describes the soil drainage of the soil that you are planting your Little Forest in",
+	siteConditions: drainageConditions,
+};
+
+// Soil Moisture Regime Condition List
+const moistureConditions: SiteConditionValues[] = [
+	{ subtitle: "Dry" },
+	{ subtitle: "Fresh" },
+	{ subtitle: "Moist" },
+	{ subtitle: "Wet" },
+];
+
+// Moisture container props
+const moistureContainer: ContainerValues = {
+	title: "Soil Moisture Regime",
+	description:
+		"Select the option that best describes the moisture regime of the soil that you are planting your Little Forest in",
+	siteConditions: moistureConditions,
+};
+
+// Soil Texture Condition List
+const textureConditions: SiteConditionValues[] = [
+	{ subtitle: "Sandy" },
+	{ subtitle: "Sandy Loam" },
+	{ subtitle: "Loam" },
+	{ subtitle: "Silty Loam" },
+	{ subtitle: "Clay Loam" },
+	{ subtitle: "Clay" },
+	{ subtitle: "Heavy Clay" },
+];
+
+// Drainage container props
+const textureContainer: ContainerValues = {
+	title: "Soil Texture",
+	description:
+		"Select the option that best describes the texture of the soil that you are planting your Little Forest in",
+	siteConditions: textureConditions,
+};
+
+// Depth to Bedrock Condition List
+const bedrockConditions: SiteConditionValues[] = [
+	{ subtitle: "Less than 16 cm" },
+	{ subtitle: "16cm - 1m" },
+	{ subtitle: "More than 1m" },
+];
+
+// Bedrock Depth container props
+const bedrockContainer: ContainerValues = {
+	title: "Depth to Bedrock",
+	description:
+		"Select the depth from bedrock that your Little Forest will be grown from",
+	siteConditions: bedrockConditions,
+};
+
+// List our containers
+const pageContainers: ContainerValues[] = [
+	slopeContainer,
+	drainageContainer,
+	moistureContainer,
+	textureContainer,
+	bedrockContainer,
+];
+
+// Test Forest Type
+const testForest: ForestContainerValues = {
+    title: "Test Forest", 
+    description: "This is the test for short description of this forest type."
+}
+
+// List to hold the values of the current suggested forest list
+const currForestResults:ForestContainerValues[] = [testForest]
 
 // Build our component
-export default function SelectPage() {
+export default function BuilderPage() {
 
 	// Use State to track the selected radio buttons
-	const [selectedConditionValues, setSelectedValue] = useState<string[]>([]);
-
-	// Use State to track the current forest types
-	const [forestTypes, setForestTypes]: [any, Function] = useState([]);
-
-	// Use State to track the selection of radio buttons 
-	const handleRadioSelect = (key: string, value: string) => {
-		// If the list is empty, then enter the first value automatically 
-		if (selectedConditionValues.length === 0) {
-			// Add the key then the value to the list 
-			selectedConditionValues.push(key);
-			selectedConditionValues.push(value);
-		}
-		// If there is any length to the selected values
-		else {
-			// Iterate through the list 
-			for (var loopCount = 0; loopCount < selectedConditionValues.length; loopCount++) {
-				// Check if the value matches the key 
-				if (key === selectedConditionValues[loopCount]) {
-					// Update the next value in the list 
-					selectedConditionValues[loopCount + 1] = value;
-				}
-			}
-		}
-
-		// After we have created/updated our list, we then request the little forests that match the conditions
-		fetch(process.env.REACT_APP_API + "/api/forests")
-		.then((res) => res.json())
-			.then((data) => {
-				setForestTypes(data);
-				console.log(data);
-				console.log(forestTypes);
-			})
-			.catch(console.log);
-	}
+	const [selectedConditionValues, setSelectedValue] = useState([]);
 
 	// Retrieve the site conditions from React
 	const [conditions, setConditions]: [any, Function] = useState([]);
@@ -89,7 +157,10 @@ export default function SelectPage() {
 
 	const [selectedForestType, setSelectedForestType] = useState('default');
 
-	const navigate = useNavigate();
+	// Function that will update the selected button
+	const handleForestSelect = (forestSelected: string) => {
+		setSelectedForestType(forestSelected);
+	}
 
 	return (
 		<>
@@ -115,14 +186,14 @@ export default function SelectPage() {
 				<Grid item xs={0.4} />
 				<Grid item xs={8}>
 					<Stack>
-						{conditions.map((displayContainer: { name: string; siteConditions: SiteConditionValues[]; }) =>(
+						{pageContainers.map( displayContainer =>(
 							<ConditionContainer 
-							key={displayContainer.name}
-							title={displayContainer.name} 
+							key={displayContainer.title}
+							title={displayContainer.title} 
+							description={displayContainer.description} 
 							siteConditions={displayContainer.siteConditions}
 							setSelectedValue={setSelectedValue}
 							selectedValues={selectedConditionValues}
-							radioFunction={handleRadioSelect}
 							/>
 						))}
 					</Stack>
@@ -139,20 +210,25 @@ export default function SelectPage() {
 							position: "fixed"
 						}}
 					>
-					{ forestTypes.length === 0 ? (
+					{ currForestResults.length === 0 ? (
 							<>  
 								<h3>No inputs selected, results will be displayed here as you select site conditions!</h3>
 							</>
 						) : (
-								<>
-									{forestTypes.map((forestType: { name: string; }) =>(
+							<>
+							
+								<Stack>
+									{currForestResults.map ( displayResult =>(
 										<ForestTypeContainer 
-										key={forestType.name}
-										name={forestType.name} 
-										setForestValue={navigate}
+										title={displayResult.title} 
+											description={displayResult.description}
+											setForestValue={handleForestSelect}
 										/>
-									))}
-								</>
+										)
+									
+									)}
+								</Stack>
+							</>
 						)
 					}
 					</Box>

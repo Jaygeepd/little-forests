@@ -36,7 +36,6 @@ export default function ForestResultsList() {
       <AccountHeader />    
       <br /><br /><br /><br /><br />
       <h2>Forest Type</h2>
-      <ProgressStepper />
       <br />
       <Container sx={{display:"flex", flexDirection:"column", alignItems:"center"}}>
         <div className="top-half">

@@ -59,7 +59,7 @@ function EditForests() {
 					>
 						<Button
 							component={Link}
-							to="/edit-page"
+							to="/edit-forest-page"
 							sx={{ marginBottom: 2 }}
 							variant="outlined"
 							size="small"
@@ -107,7 +107,7 @@ function EditForests() {
 					>
 						<Button
 							component={Link}
-							to="/edit-page"
+							to="/edit-forest-page"
 							sx={{ marginBottom: 2 }}
 							variant="outlined"
 							size="small"
@@ -155,7 +155,7 @@ function EditForests() {
 					>
 						<Button
 							component={Link}
-							to="/edit-page"
+							to="/edit-forest-page"
 							sx={{ marginBottom: 2 }}
 							variant="outlined"
 							size="small"
@@ -203,7 +203,7 @@ function EditForests() {
 					>
 						<Button
 							component={Link}
-							to="/edit-page"
+							to="/edit-forest-page"
 							sx={{ marginBottom: 2 }}
 							variant="outlined"
 							size="small"

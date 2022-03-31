@@ -22,6 +22,7 @@ import BrowseForestPage from "./components/Pages/BrowseForestPage";
 import BrowsePlantList from "./components/Pages/BrowsePlantList";
 import PageNotFound from "./components/Pages/PageNotFound";
 import IndivPlantPage from "./components/Pages/IndivPlantPage";
+import EditForestPage from "./components/EditForestPage";
 
 // Consistent theme for the website
 const theme = createTheme({
@@ -71,6 +72,7 @@ const App = () => {
 						path="/browse-plant-list"
 						element={<BrowsePlantList />}
 					/>
+					<Route path="/edit-forest-page" element={<EditForestPage />} />
 					<Route path="*" element={<PageNotFound />} />
 				</Routes>
 			</div>

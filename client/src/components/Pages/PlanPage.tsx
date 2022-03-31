@@ -99,7 +99,7 @@ export default function PlanPage() {
 				<Grid item xs={8}>
 					<Stack spacing={3}>
 						<SelectorBox
-							title="Trees"
+							title="Plant List"
 							selectorList={treeList}
 							openFunc={handleOpen}
 							closeFunc={handleClose}

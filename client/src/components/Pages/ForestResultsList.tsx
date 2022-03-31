@@ -57,8 +57,9 @@ function ForestResultsList() {
 											<CardMedia
 												component="img"
 												height="200"
-												image="/images/image-placeholder.png"
+												image={require("./images/image-placeholder.png")}
 												alt="Image placeholder"
+												style={{ borderRadius: 5 }}
 											/>
 											<CardContent>
 												<Typography
